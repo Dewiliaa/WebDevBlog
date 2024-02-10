@@ -1,67 +1,19 @@
-(function($) { "use strict";
-    
-  //Page cursors
+let stars = document.getElementById('stars');
+let moon = document.getElementById('moon');
+let mountains_behind = document.getElementById('mountains_behind');
+let text = document.getElementById('text');
+let btn = document.getElementById('btn');
+let mountains_front = document.getElementById('mountains_front');
+let header = document.querySelector('header');
 
-    document.getElementsByTagName("body")[0].addEventListener("mousemove", function(n) {
-        t.style.left = n.clientX + "px", 
-    t.style.top = n.clientY + "px", 
-    e.style.left = n.clientX + "px", 
-    e.style.top = n.clientY + "px", 
-    i.style.left = n.clientX + "px", 
-    i.style.top = n.clientY + "px"
-    });
-    var t = document.getElementById("cursor"),
-        e = document.getElementById("cursor2"),
-        i = document.getElementById("cursor3");
-    function n(t) {
-        e.classList.add("hover"), i.classList.add("hover")
-    }
-    function s(t) {
-        e.classList.remove("hover"), i.classList.remove("hover")
-    }
-    s();
-    for (var r = document.querySelectorAll(".hover-target"), a = r.length - 1; a >= 0; a--) {
-        o(r[a])
-    }
-    function o(t) {
-        t.addEventListener("mouseover", n), t.addEventListener("mouseout", s)
-    }
-  
-  //Navigation
-
-  var app = function () {
-    var body = undefined;
-    var menu = undefined;
-    var menuItems = undefined;
-    var init = function init() {
-      body = document.querySelector('body');
-      menu = document.querySelector('.menu-icon');
-      menuItems = document.querySelectorAll('.nav__list-item');
-      applyListeners();
-    };
-    var applyListeners = function applyListeners() {
-      menu.addEventListener('click', function () {
-        return toggleClass(body, 'nav-active');
-      });
-    };
-    var toggleClass = function toggleClass(element, stringClass) {
-      if (element.classList.contains(stringClass)) element.classList.remove(stringClass);else element.classList.add(stringClass);
-    };
-    init();
-  }();
-
-  
-  //Switch light/dark
-  
-  $("#switch").on('click', function () {
-    if ($("body").hasClass("light")) {
-      $("body").removeClass("light");
-      $("#switch").removeClass("switched");
-    }
-    else {
-      $("body").addClass("light");
-      $("#switch").addClass("switched");
-    }
-  });
-  
-})(jQuery); 
+window.addEventListener('scroll', function(){
+    let value = window.scrollY;
+    stars.style.left = value * 0.25 + 'px';
+    moon.style.top = value * 1.05 + 'px';
+    mountains_behind.style.top = value * 0.5 + 'px';
+    mountains_front.style.top = value * 0 + 'px';
+    text.style.marginRight = value * 4 + 'px';
+    text.style.marginTop = value * 1.5 + 'px';
+    btn.style.marginTop = value * 1.5 + 'px';
+    header.style.top = value * 0.5 + 'px';
+})
