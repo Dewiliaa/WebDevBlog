@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Week 3</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/index.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Virnanda</a>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#" class="active">Weeks</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="../Pictures/stars.png" id="stars">
+        <img src="../Pictures/moon.png" id="moon">
+        <img src="../Pictures/mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Week 3!</h2>
+        <a href="../HTML/week4.html" id="btn">Week 4 ></a>
+        <img src="../Pictures/mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>&#127881 Week 3! &#127881</h2>
+        <p>Hi there!<br><br>In week 3, we delved into the practical aspects of web development by exploring 
+        the following key concepts:<br><br>
+        1. Form Tag (form>/form>): We learned how to create forms using the form tag, which allows users to 
+        input data that can be submitted to a server for processing. Forms are fundamental for collecting user 
+        information or enabling user interaction on web pages.<br><br>2. Input Tag (input>): Within the form, 
+        we utilized the input tag to create various types of input fields such as text fields, checkboxes, 
+        radio buttons, and more. These input fields allow users to enter data into the form.
+        <br><br>3. Label Tag (label>/label>): To associate labels with input fields, we employed the label tag. 
+        Labels improve accessibility and user experience by providing descriptive text for form elements. 
+        Clicking on a label focuses on the associated input field, enhancing usability.<br><br>4. Form Validation:
+        We explored simple form validation techniques to ensure that the data submitted by users meets 
+        certain criteria or constraints. By implementing basic validation rules, such as requiring certain fields 
+        to be filled or validating input formats (e.g., email addresses), we can enhance data integrity and 
+        user experience.<br><br>Additionally, we continued to refine our understanding of responsive web design 
+        by applying media queries. Media queries allow us to adjust the layout and styling of our web pages 
+        based on the characteristics of the device or browser viewport, enabling a consistent user experience 
+        across various screen sizes.<br><br>For the class activity, I designed a simple form (the one below) that incorporates 
+        HTML form elements. This hands-on exercise provided practical experience in implementing forms and 
+        validation in web development.<br><br>Okay that's all for this week! See you later alligator.</p>
+    </div>
+
+    <main>
+        <form>
+          <div>
+            <label for="name" class="large-label">Name</label>
+            <input id="name" type="text" placeholder="First or Full Name" />
+          </div>
+          <div>
+            <label for="email" class="large-label">Email</label>
+            <input id="email" type="email" placeholder="name@example.com" />
+          </div>
+          <div>
+            <label for="comp" class="large-label">Favorite CSS Compiler</label>
+            <select id="comp">
+              <option value="sass">Sass</option>
+              <option value="less">Less</option>
+              <option value="stylus">Stylus</option>
+              <option value="postcss">PostCSS</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div>
+            <fieldset>
+              <legend class="large-label">Are you familiar with CSS Grid?</legend>
+              <input type="radio" name="grid" id="yes" value="yes" />
+              <label for="yes" class="small-label">Yes</label>
+              <input type="radio" name="grid" id="yes" value="somewhat" />
+              <label for="somewhat" class="small-label">Somewhat</label>
+              <input type="radio" name="grid" id="a little" value="a little" />
+              <label for="a little" class="small-label">A little</label>
+              <input type="radio" name="grid" id="no" value="no" />
+              <label for="no" class="small-label">No</label>
+            </fieldset>
+          </div>
+          <div class="full-width">
+            <label for="message" class="large-label">Message</label>
+            <textarea id="message" placeholder="Leave a message…"></textarea>
+          </div>
+          <div class="full-width">
+            <input type="checkbox" id="agreement" />
+            <label for="agreement" class="small-label">Remember me!</label>
+  
+            <input type="checkbox" id="update" />
+            <label for="update" class="small-label">Sign up for updates?</label>
+  
+            <input type="checkbox" id="terms" />
+            <label for="terms" class="small-label">Agree to terms and conditions?</label>
+  
+            <input type="checkbox" id="newsletter" />
+            <label for="newsletter" class="small-label">Receive our newsletter?</label>
+  
+  
+          </div>
+          <div class="full-width">
+            <button type="submit">Send Response</button>
+            <button type="reset">Clear Form</button>
+          </div>
+        </form>
+      </main>
+
+    <script src="../JavaScript/index.js"></script>
+</body>
+</html>
